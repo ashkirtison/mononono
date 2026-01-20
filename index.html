@@ -871,46 +871,71 @@
         }
 
         monaco.editor.defineTheme("theme1", {
-          base: "vs-dark",
+          base: "vs",
           inherit: true,
+        
           rules: [
-            { token: "keyword", foreground: "#8F7AD9" },
-            { token: "string", foreground: "#9A9A9A" },
-            { token: "number", foreground: "#9A9A9A" },
-            { token: "comment", foreground: "#4B4B4F" },
-            { token: "variable", foreground: "#C9C9C9" },
-            { token: "entity.name.function", foreground: "#B6ACE8" },
+            { token: "keyword", foreground: "6F4FD8" },          // Soft purple
+            { token: "string", foreground: "6A6A6A" },
+            { token: "number", foreground: "6A6A6A" },
+            { token: "comment", foreground: "9A9A9A", fontStyle: "italic" },
+            { token: "variable", foreground: "3A3A3A" },
+            { token: "entity.name.function", foreground: "5A4FCF" },
           ],
+        
           colors: {
-            "editor.background": "#131219", // PrimaryBackground
-            "editor.foreground": "#767676", // Foreground
-            "editorLineNumber.foreground": "#332C40", // Border
-            "editorLineNumber.activeForeground": "#767676", // Foreground
-            "editor.lineHighlightBackground": "#0000", // SecondaryBackground
-            "editor.lineHighlightBorder": "#181818", // Border
-            "editorIndentGuide.background": "#1A1821", // SecondaryBackground
-            "editorIndentGuide.activeBackground": "#332C40", // Border
-            "editorCursor.foreground": "#767676", // Foreground
-            "editor.selectionBackground": "#332C40", // Border
-            "editor.selectionHighlightBackground": "#332C40",
-            "editor.wordHighlightBackground": "#1A1821",
-            "editor.wordHighlightStrongBackground": "#1A1821",
-            "editor.findMatchBackground": "#332C40",
-            "editor.findMatchHighlightBackground": "#1A1821",
-            "editorSuggestWidget.background": "#1A1821", // SecondaryBackground
-            "editorSuggestWidget.border": "#332C40", // Border
-            "editorSuggestWidget.foreground": "#767676", // Foreground
-            "editorSuggestWidget.selectedBackground": "#332C40", // Border
-            "editorSuggestWidget.highlightForeground": "#b4b4b4",
-            "editorBracketHighlight.foreground1": "#767676",
-            "editorBracketHighlight.foreground2": "#767676",
-            "editorBracketHighlight.foreground3": "#767676",
-            "editorGutter.background": "#131219", // PrimaryBackground
-            "scrollbarSlider.background": "#1A1821", // SecondaryBackground
-            "scrollbarSlider.hoverBackground": "#332C40", // Border
-            "scrollbarSlider.activeBackground": "#332C40", // Border
-            "minimap.background": "#131219", // PrimaryBackground
-            "minimap.selectionHighlight": "#332C40",
+            /* Editor core */
+            "editor.background": "#FFFFFF",
+            "editor.foreground": "#2E2E2E",
+        
+            /* Line numbers */
+            "editorLineNumber.foreground": "#C2C2C2",
+            "editorLineNumber.activeForeground": "#5A5A5A",
+        
+            /* Current line */
+            "editor.lineHighlightBackground": "#F5F5F7",
+            "editor.lineHighlightBorder": "#E0E0E0",
+        
+            /* Indent guides */
+            "editorIndentGuide.background": "#EAEAEA",
+            "editorIndentGuide.activeBackground": "#CFCFCF",
+        
+            /* Cursor & selection */
+            "editorCursor.foreground": "#4A4A4A",
+            "editor.selectionBackground": "#DADCE0",
+            "editor.selectionHighlightBackground": "#E6E8EB",
+        
+            /* Word highlight */
+            "editor.wordHighlightBackground": "#ECEDEF",
+            "editor.wordHighlightStrongBackground": "#E0E2E5",
+        
+            /* Find */
+            "editor.findMatchBackground": "#D0D4DA",
+            "editor.findMatchHighlightBackground": "#E6E8EB",
+        
+            /* Suggest widget */
+            "editorSuggestWidget.background": "#FFFFFF",
+            "editorSuggestWidget.border": "#D0D0D0",
+            "editorSuggestWidget.foreground": "#2E2E2E",
+            "editorSuggestWidget.selectedBackground": "#E8EAED",
+            "editorSuggestWidget.highlightForeground": "#5A4FCF",
+        
+            /* Brackets */
+            "editorBracketHighlight.foreground1": "#5A5A5A",
+            "editorBracketHighlight.foreground2": "#5A5A5A",
+            "editorBracketHighlight.foreground3": "#5A5A5A",
+        
+            /* Gutter */
+            "editorGutter.background": "#FFFFFF",
+        
+            /* Scrollbars */
+            "scrollbarSlider.background": "#DADADA",
+            "scrollbarSlider.hoverBackground": "#C2C2C2",
+            "scrollbarSlider.activeBackground": "#AFAFAF",
+        
+            /* Minimap */
+            "minimap.background": "#FFFFFF",
+            "minimap.selectionHighlight": "#DADCE0",
           },
         });
 
@@ -1315,4 +1340,5 @@ require(["vs/basic-languages/monaco.contribution"], function () {
    <script src="script.js"></script>
   </body>
 </html>
+
 
