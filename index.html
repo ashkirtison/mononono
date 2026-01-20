@@ -871,73 +871,75 @@
         }
 
         monaco.editor.defineTheme("theme1", {
-          base: "vs",
+          base: "vs-dark",
           inherit: true,
         
           rules: [
-            { token: "keyword", foreground: "6F4FD8" },          // Soft purple
-            { token: "string", foreground: "6A6A6A" },
-            { token: "number", foreground: "6A6A6A" },
-            { token: "comment", foreground: "9A9A9A", fontStyle: "italic" },
-            { token: "variable", foreground: "3A3A3A" },
-            { token: "entity.name.function", foreground: "5A4FCF" },
+            // Primary code
+            { token: "", foreground: "FFFFFF" },
+            { token: "keyword", foreground: "FFFFFF" },
+            { token: "variable", foreground: "FFFFFF" },
+            { token: "type", foreground: "FFFFFF" },
+            { token: "entity.name.function", foreground: "FFFFFF" },
+        
+            // Secondary code
+            { token: "string", foreground: "DADADA" },
+            { token: "number", foreground: "DADADA" },
+        
+            // Tertiary / non-focus
+            { token: "comment", foreground: "8C8C8C", fontStyle: "italic" },
           ],
         
           colors: {
-            /* Editor core */
-            "editor.background": "#00000000",
-            "editor.foreground": "#2E2E2E",
+            /* Core */
+            "editor.background": "#131219",
+            "editor.foreground": "#FFFFFF",
+        
+            /* Cursor */
+            "editorCursor.foreground": "#FFFFFF",
+        
+            /* Selection */
+            "editor.selectionBackground": "#2E2E2E",
+            "editor.selectionHighlightBackground": "#3A3A3A",
         
             /* Line numbers */
-            "editorLineNumber.foreground": "#C2C2C2",
-            "editorLineNumber.activeForeground": "#5A5A5A",
+            "editorLineNumber.foreground": "#6A6A6A",
+            "editorLineNumber.activeForeground": "#FFFFFF",
         
-            /* Current line */
-            "editor.lineHighlightBackground": "#F5F5F7",
-            "editor.lineHighlightBorder": "#E0E0E0",
+            /* Line highlight */
+            "editor.lineHighlightBackground": "#1C1C1C",
+            "editor.lineHighlightBorder": "#2E2E2E",
         
             /* Indent guides */
-            "editorIndentGuide.background": "#EAEAEA",
-            "editorIndentGuide.activeBackground": "#CFCFCF",
-        
-            /* Cursor & selection */
-            "editorCursor.foreground": "#4A4A4A",
-            "editor.selectionBackground": "#DADCE0",
-            "editor.selectionHighlightBackground": "#E6E8EB",
-        
-            /* Word highlight */
-            "editor.wordHighlightBackground": "#ECEDEF",
-            "editor.wordHighlightStrongBackground": "#E0E2E5",
-        
-            /* Find */
-            "editor.findMatchBackground": "#D0D4DA",
-            "editor.findMatchHighlightBackground": "#E6E8EB",
-        
-            /* Suggest widget */
-            "editorSuggestWidget.background": "#FFFFFF",
-            "editorSuggestWidget.border": "#D0D0D0",
-            "editorSuggestWidget.foreground": "#2E2E2E",
-            "editorSuggestWidget.selectedBackground": "#E8EAED",
-            "editorSuggestWidget.highlightForeground": "#5A4FCF",
+            "editorIndentGuide.background": "#2A2A2A",
+            "editorIndentGuide.activeBackground": "#5A5A5A",
         
             /* Brackets */
-            "editorBracketHighlight.foreground1": "#5A5A5A",
-            "editorBracketHighlight.foreground2": "#5A5A5A",
-            "editorBracketHighlight.foreground3": "#5A5A5A",
+            "editorBracketHighlight.foreground1": "#FFFFFF",
+            "editorBracketHighlight.foreground2": "#BEBEBE",
+            "editorBracketHighlight.foreground3": "#9E9E9E",
+        
+            /* Suggest widget */
+            "editorSuggestWidget.background": "#1C1C1C",
+            "editorSuggestWidget.border": "#2E2E2E",
+            "editorSuggestWidget.foreground": "#FFFFFF",
+            "editorSuggestWidget.selectedBackground": "#2E2E2E",
+            "editorSuggestWidget.highlightForeground": "#FFFFFF",
         
             /* Gutter */
-            "editorGutter.background": "#FFFFFF",
+            "editorGutter.background": "#131219",
         
             /* Scrollbars */
-            "scrollbarSlider.background": "#DADADA",
-            "scrollbarSlider.hoverBackground": "#C2C2C2",
-            "scrollbarSlider.activeBackground": "#AFAFAF",
+            "scrollbarSlider.background": "#2A2A2A",
+            "scrollbarSlider.hoverBackground": "#3A3A3A",
+            "scrollbarSlider.activeBackground": "#5A5A5A",
         
             /* Minimap */
-            "minimap.background": "#FFFFFF",
-            "minimap.selectionHighlight": "#DADCE0",
+            "minimap.background": "#131219",
+            "minimap.selectionHighlight": "#2E2E2E",
           },
         });
+
 
 require(["vs/basic-languages/monaco.contribution"], function () {
           monaco.languages.registerCompletionItemProvider("lua", {
@@ -1340,6 +1342,7 @@ require(["vs/basic-languages/monaco.contribution"], function () {
    <script src="script.js"></script>
   </body>
 </html>
+
 
 
 
